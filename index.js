@@ -16,9 +16,14 @@
   örnek output: ""
 */
 
-function dosyaAdiniBul(/* kodlar buraya */) {
-  // kodlar buraya
+let text = "C:/Users/johnsmith/Music/Beethoven_5.mp3";
+
+function dosyaAdiniBul() {
+  let result = text.lastIndexOf("/");
+  dosya = text.substr(result + 1);
+  return dosya;
 }
+console.log(dosyaAdiniBul());
 
 /*
   GÖREV 2
