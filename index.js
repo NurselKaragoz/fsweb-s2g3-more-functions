@@ -20,7 +20,7 @@ let text = "C:/Users/johnsmith/Music/Beethoven_5.mp3";
 
 function dosyaAdiniBul() {
   let result = text.lastIndexOf("/");
-  dosya = text.substr(result + 1);
+  dosya = text.substring(result + 1);
   return dosya;
 }
 console.log(dosyaAdiniBul());
@@ -72,9 +72,22 @@ console.log(ortalamaBul(dizitoplam, dizi.length));
   örnek output: [109, 216, 288, 143, 185, 194]
 */
 
-function ortalamadanBuyukleriBul(/* kodlar buraya */) {
-  // kodlar buraya
+const dizi1 = [50, 26, 153, 7, 45, 89, 68];
+function toplamiBul(toplam, current) {
+  return toplam + current;
 }
+const dizitoplam1 = dizi1.reduce(toplamiBul);
+function ortalamaBul(bölüm, bölen) {
+  return bölüm / bölen;
+}
+const result = ortalamaBul(dizitoplam1, dizi1.length);
+// console.log(result);
+
+function ortalamadanBuyukleriBul(value) {
+  return value > result;
+}
+const sonuc = dizi1.filter(ortalamadanBuyukleriBul);
+console.log(sonuc);
 
 /* !!!! Burdan aşağısını değiştirmeyin !!!! */
 function as() {
