@@ -37,10 +37,15 @@ function dosyaAdiniBul(/* kodlar buraya */) {
   örnek input:  [109, 216, 288, 143, 71, 185, -278, 194, 5]
   örnek output: 104
 */
-
-function ortalamaBul(/* kodlar buraya */) {
-  // kodlar buraya
+const dizi = [50, 26, 153, 7];
+function toplamiBul(toplam, current) {
+  return toplam + current;
 }
+const dizitoplam = dizi.reduce(toplamiBul);
+function ortalamaBul(bölüm, bölen) {
+  return bölüm / bölen;
+}
+console.log(ortalamaBul(dizitoplam, dizi.length));
 
 /*
   GÖREV 3
